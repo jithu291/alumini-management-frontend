@@ -17,7 +17,7 @@ function Dashboard() {
       setLoading(true);
       try {
         const res = await getUserDataApi();
-        setUsers(res || []);
+        setUsers(res.data || []);
       } catch (err) {
         console.error("Failed to load users:", err);
       } finally {

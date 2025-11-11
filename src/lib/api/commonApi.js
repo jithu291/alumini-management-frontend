@@ -44,7 +44,7 @@ export const getUserDataApi = async () => {
             }
         );
 
-        return response.data;
+        return response.data.data;
     } catch (error) {
         console.error("Error in getUserDataApi:", error);
         throw error.response?.data || { message: "Something went wrong" };
