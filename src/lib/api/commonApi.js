@@ -2,7 +2,7 @@ import axiosInstance from "../axiosInstance";
 
 export const registerUserApi = async (formData) => {
     try {
-        const response = await axiosInstance.post("/auth/register", formData, {
+        const response = await axiosInstance.post("/api/auth/register", formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
@@ -17,7 +17,7 @@ export const registerUserApi = async (formData) => {
 export const loginUserApi = async (data) => {
 
     try {
-        const response = await axiosInstance.post("/auth/login", data, {
+        const response = await axiosInstance.post("/api/auth/login", data, {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -34,7 +34,7 @@ export const getUserDataApi = async () => {
         const token = localStorage.getItem("token");
 
         const response = await axiosInstance.post(
-            "/user/getAll",
+            "/api/user/getAll",
             {},
             {
                 headers: {
