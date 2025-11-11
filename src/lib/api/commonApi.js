@@ -33,7 +33,7 @@ export const getUserDataApi = async () => {
     try {
         const token = localStorage.getItem("token");
 
-        const response = await axiosInstance.post(
+        const response = await axiosInstance.get(
             "/api/user/getAll",
             {},
             {
